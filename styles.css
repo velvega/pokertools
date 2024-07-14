@@ -109,6 +109,9 @@ input[type="text"]:focus, input[type="number"]:focus {
 @media (max-width: 768px) {
     .container {
         padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #table {
@@ -125,9 +128,24 @@ input[type="text"]:focus, input[type="number"]:focus {
 
     #action-history-container {
         width: 100%;
+        order: 2; /* テーブルの下に表示されるように順序を変更 */
+        margin-top: 10px;
     }
 
     .controls {
         padding: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #game-screen {
+        order: 1; /* テーブルの下に表示されるように順序を変更 */
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
