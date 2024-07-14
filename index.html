@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ポーカーゲーム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="setup-screen" class="controls">
+            <label for="player-count">プレイヤー数:</label>
+            <input type="number" id="player-count" min="2" max="10" value="4"><br>
+            <label for="initial-chips">初期チップ:</label>
+            <input type="number" id="initial-chips" value="1000"><br>
+            <label for="small-blind">スモールブラインド:</label>
+            <input type="number" id="small-blind" value="10"><br>
+            <label for="big-blind">ビッグブラインド:</label>
+            <input type="number" id="big-blind" value="20"><br>
+            <button id="start-game">ゲーム開始</button>
+        </div>
+        <div id="name-input-screen" class="controls" style="display: none;">
+            <div id="name-inputs"></div>
+            <button id="submit-names">名前を設定</button>
+        </div>
+        <div id="game-area" style="display: none;">
+            <div id="table"></div>
+            <div id="action-history-container">
+                <h2>アクション履歴</h2>
+                <div id="action-history"></div>
+            </div>
+        </div>
+        <div id="game-screen" class="controls" style="display: none;">
+            <div>
+                <label for="bet-amount">ベット:</label>
+                <input type="number" id="bet-amount" min="1">
+                <button id="place-bet">ベット</button><br>
+                <button id="call-bet">コール</button><br>
+                <button id="fold-bet">フォールド</button><br>
+                <button id="check-bet">チェック</button><br>
+                <button id="next-turn">次のターン</button><br>
+            </div>
+            <div>
+                <button id="next-hand">次のハンド</button><br>
+                <button id="showdown">ショウダウン</button><br>
+            </div>
+            <div id="showdown-actions" style="display: none;">
+                <label for="winner-select">勝者を選択:</label>
+                <select id="winner-select"></select>
+                <button id="pot-award">ポットを獲得</button>
+                <div id="sidepots">
+                    <div id="sidepot-display"></div>
+                </div>
+            </div>
+            <div id="hand-number">ハンド数: 1</div>
+            <div id="current-turn">現在のターン: プリフロップ</div>
+            <div id="pot-display"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+#table {
+    position: relative;
+    width: 800px; /* ポーカーテーブルを広くする */
+    height: 600px; /* ポーカーテーブルを広くする */
+    background: #27ae60;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.player {
+    position: absolute;
+    background-color: #2980b9;
+    color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn, .sb, .bb {
+    font-size: 12px;
+    color: #f31212;
+}
+
+.folded {
+    background-color: #7f8c8d;
+    color: #bdc3c7;
+}
+
+.action-player {
+    border: 2px solid #e74c3c;
+}
+
+button {
+    background-color: #2980b9;
+    color: #ecf0f1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 5px;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    margin: 5px;
+    color: #34495e;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+#action-history-container {
+    margin-left: 20px;
+    width: 200px;
+    text-align: left;
+}
+
+#action-history {
+    background-color: #34495e;
+    padding: 10px;
+    border-radius: 5px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.player.all-in {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+}
+
+.player.defeated {
+    background-color: gray;
+    color: white;
+    text-decoration: line-through;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    #table {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .player {
+        width: 80px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    #action-history-container {
+        width: 100%;
+    }
+
+    .controls {
+        padding: 10px;
+    }
+}
